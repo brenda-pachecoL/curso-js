@@ -225,36 +225,4 @@
 // // perroo.ladrar();
 // // gato.verInfo();
 
-class Celulares{
-    constructor(color,peso,rdp,rdc,ram){
-       this.color = color;
-       this.peso = peso;
-       this.resolucionDePantalla = rdp;
-       this.resolucionDeCamara = rdc;
-       this.memoriaRam = ram;
-       this.encendido = false;
-    }
-    prende(){
-        if (this.encendido == false){
-            alert("celular prendido");
-            this.encendido = true
-        }else{
-            alert("El celular ya esta encendido")
-        }
-    }
-    apagar(){
-        if (this.encendido == true){
-            alert("celular apagado");
-            this.encendido = true;
-        }else{
-            alert("El celular ya esta apagado")
-        }
-    }
-    verInfo(){
-        document.write(`El color es ${this.color}, pesa ${this.peso} gramos, tiene ${this.resolucionDePantalla}px de resolucion de pantalla, tiene ${this.resolucionDeCamara}px resolucion de camara y cuenta con ${this.memoriaRam}GB de memoria ram`)
-    }
-
-}
-
-const samsung = new Celulares("azul",200,400,16,32);
-Celulares.verInfo();
+document.write("hola")
