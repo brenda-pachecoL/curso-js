@@ -58,7 +58,7 @@ class celularAltaGama extends Celulares {
         return this.mobileInfo() + `Resolucion de camara extra: ${this.resolucionDeCamaraExtra}`
     }
     mobilInfoGamaAlta(){
-         return this.mobileInfo() + `Resolucion de camara trasera: ${this.resolucionDeCamaraExtra}<br>`
+         return this.mobileInfo() + `Resolucion de camara Extra: ${this.resolucionDeCamaraExtra}<br>`
     }
 
     
