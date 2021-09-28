@@ -49,10 +49,10 @@ app6 = new App("14mil","5 estrellas","600mb");
 app7 = new App("11mil","2 estrellas","400mb");
 app8 = new App("16mil","1 estrellas","800mb")
 
-// app.instalar()
-// app.desinstalar()
-// app.abrir()
-// app.cerrar()
+ app.instalar()
+ app.desinstalar()
+ app.abrir()
+ app.cerrar()
 
 document.write(`
     ${app.appInfo()}<br>
