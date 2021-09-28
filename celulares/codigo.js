@@ -1,8 +1,8 @@
 class Celulares{
-    constructor(color,peso,rdp,rdc,ram){
+    constructor(color,peso,tamaño,rdc,ram){
        this.color = color;
        this.peso = peso;
-       this.resolucionDePantalla = rdp;
+       this.tamaño= tamaño;
        this.resolucionDeCamara = rdc;
        this.memoriaRam = ram;
        this.encendido = false;
@@ -10,9 +10,9 @@ class Celulares{
     presioneElBotonEncendido(){
         if (this.encendido == false){
             alert("celular prendido");
-            this.encendido = true
+            this.encendido = true;
         }else{
-            alert("El celular apagado");
+            alert("celular apagado");
             this.encendido = false;
         }
     }
@@ -26,19 +26,19 @@ class Celulares{
     }
 
     tomarFotos(){
-            alert(`foto tomada en una resolucion de ; ${this.resolucionDeCamara}`);
+            alert(`foto tomada en una resolucion de  ${this.resolucionDeCamara}`);
     }
     tomarVideo(){
-        alert(`video en una resolucion de ; ${this.resolucionDeCamara}`);
+        alert(`video en una resolucion de  ${this.resolucionDeCamara}`);
 
     }
     mobileInfo(){
-        return`
+        return `
         Color: <b>${this.color}</b></br>
         Peso: <b>${this.peso}</b></br>
         Tamaño: <b>${this.tamaño}</b></br>
         Resolucion de video: <b>${this.resolucionDeCamara}</b></br>
-        Memoria Ram: <b>${this.memoriaRam}</b></br>`
+        Memoria Ram: <b>${this.memoriaRam}</b></br> `
         
     }
 
@@ -69,7 +69,12 @@ nokia = new Celulares("verde","190g","5","4k","12Gb","hd");
 // // samsung.tomarFotos();
 // // samsung.tomarVideo();
 document.write(`
-    ${samsung.mobileInfo}<br><br>
-    ${lg.mobileInfo}<br>
-    ${nokia.mobileInfo}<br>
+    ${samsung.mobileInfo()}<br><br>
+    ${lg.mobileInfo()}<br>
+    ${nokia.mobileInfo()}<br>
     `);
+
+samsung.presioneElBotonEncendido();
+samsung.tomarFotos();
+samsung.tomarVideo();
+samsung.reiniciar();
