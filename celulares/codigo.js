@@ -57,24 +57,34 @@ class celularAltaGama extends Celulares {
     mobileInfoAltaGama(){
         return this.mobileInfo() + `Resolucion de camara extra: ${this.resolucionDeCamaraExtra}`
     }
+    mobilInfoGamaAlta(){
+         return this.mobileInfo() + `Resolucion de camara trasera: ${this.resolucionDeCamaraExtra}<br>`
+    }
 
     
 }
 
-samsung = new Celulares("azul","150g","5","4k","32Gb","full hd");
-lg = new Celulares("rojo","150g","8","4k","8Gb", "hd");
-nokia = new Celulares("verde","190g","5","4k","12Gb","hd");
+// samsung = new Celulares("azul","150g","5","4k","32Gb","full hd");
+// lg = new Celulares("rojo","150g","8","4k","8Gb", "hd");
+// nokia = new Celulares("verde","190g","5","4k","12Gb","hd");
 // // samsung.presioneElBotonEncendido();
 // // samsung.reiniciar();
 // // samsung.tomarFotos();
 // // samsung.tomarVideo();
-document.write(`
-    ${samsung.mobileInfo()}<br><br>
-    ${lg.mobileInfo()}<br>
-    ${nokia.mobileInfo()}<br>
-    `);
 
-samsung.presioneElBotonEncendido();
-samsung.tomarFotos();
-samsung.tomarVideo();
-samsung.reiniciar();
+samsung = new celularAltaGama("azul","150g","5","4k","32Gb","hd");
+lg = new celularAltaGama("rojo","120g","5","4k","64Gb","full hd")
+// document.write(`
+//     ${samsung.mobileInfo()}<br><br>
+//     ${lg.mobileInfo()}<br>
+//     ${nokia.mobileInfo()}<br>
+//     `);
+
+// samsung.presioneElBotonEncendido();
+// samsung.tomarFotos();
+// samsung.tomarVideo();
+// samsung.reiniciar();
+document.write(`
+     ${samsung.mobilInfoGamaAlta()}<br>
+     ${lg.mobilInfoGamaAlta()}<br>
+     `);
